@@ -1,0 +1,8 @@
+{% extends "clone/base_news.html" %}
+{% block content %}
+    {% for news in all_news %}
+        <a href="/news/{{ news.link }}/"><h3>{{news.article}}</h3></a>
+        <p>{{news.created}}</p>
+        <p>{{news.descriptions}}</p>
+    {% endfor %}
+{% endblock content %}

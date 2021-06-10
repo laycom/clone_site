@@ -1,0 +1,12 @@
+{% extends "clone/base_news.html" %}
+{% block content %}
+    <h2>{{ news.article }}</h2>
+    <p>{{ news.created }}</p>
+    <img src="{{ news.image.url }}" alt="Картинка поста" class="news-image"/>
+    {% for p in news_text %}
+        <p>{{ p }}</p>
+    {% endfor %}
+
+    <a href="/news/">News</a>
+{% endblock content %}
+
